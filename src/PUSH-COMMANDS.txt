@@ -1,0 +1,85 @@
+================================================================================
+  🚀 DEPLOY LA BELLA MESA TO GITHUB - COPY & PASTE COMMANDS
+================================================================================
+
+Repository: https://github.com/ROSHANDAPPU/L.B.M.Catering
+Live URL (after deployment): https://roshandappu.github.io/L.B.M.Catering/
+
+--------------------------------------------------------------------------------
+STEP 1: COPY AND RUN THESE COMMANDS IN YOUR TERMINAL
+--------------------------------------------------------------------------------
+
+git init
+git add .
+git commit -m "Initial commit - La Bella Mesa catering website"
+git remote add origin https://github.com/ROSHANDAPPU/L.B.M.Catering.git
+git branch -M main
+git push -u origin main
+
+--------------------------------------------------------------------------------
+STEP 2: ENABLE GITHUB PAGES
+--------------------------------------------------------------------------------
+
+After pushing successfully:
+
+1. Go to: https://github.com/ROSHANDAPPU/L.B.M.Catering/settings/pages
+
+2. Under "Build and deployment":
+   - Source: Select "GitHub Actions"
+
+3. That's it! GitHub will automatically build and deploy.
+
+--------------------------------------------------------------------------------
+STEP 3: WAIT FOR DEPLOYMENT
+--------------------------------------------------------------------------------
+
+• Monitor progress: https://github.com/ROSHANDAPPU/L.B.M.Catering/actions
+• Wait 2-3 minutes for build to complete
+• Your site will be live at: https://roshandappu.github.io/L.B.M.Catering/
+
+--------------------------------------------------------------------------------
+✅ ALL CONFIGURATIONS READY
+--------------------------------------------------------------------------------
+
+✓ .github/workflows/deploy.yml - GitHub Actions workflow
+✓ .gitignore - Git ignore rules  
+✓ vite.config.ts - Base path: /L.B.M.Catering/
+✓ public/logo-light.svg - Burgundy logo
+✓ public/logo-dark.svg - Cream logo
+✓ Contact info: (214) 716-9201, contact@labellamesa­events.com
+✓ Instagram: @labellamesa_events
+
+--------------------------------------------------------------------------------
+🔄 TO UPDATE YOUR SITE LATER
+--------------------------------------------------------------------------------
+
+After making changes to your code:
+
+git add .
+git commit -m "Update: describe your changes"
+git push
+
+GitHub will automatically rebuild and redeploy!
+
+--------------------------------------------------------------------------------
+🆘 TROUBLESHOOTING
+--------------------------------------------------------------------------------
+
+If you get "permission denied":
+• You may need a Personal Access Token
+• Go to: https://github.com/settings/tokens
+• Generate new token (classic)
+• Use token as password when pushing
+
+If build fails:
+• Check: https://github.com/ROSHANDAPPU/L.B.M.Catering/actions
+• Click failed workflow to see error logs
+
+If site shows blank page:
+• Wait 2-3 minutes
+• Clear browser cache (Ctrl+F5)
+• Verify GitHub Pages is enabled in Settings
+
+================================================================================
+READY TO DEPLOY? RUN THE COMMANDS IN STEP 1 NOW! 🎉
+================================================================================

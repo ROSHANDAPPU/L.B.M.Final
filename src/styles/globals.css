@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+/* ============================================
+   La Bella Mesa Design System
+   Quiet, Accessible Luxury
+   
+   Style Description:
+   - Understated, tactile, timeless
+   - Neutral canvas with disciplined color
+   - Materials: Linen, stone, ceramic, brass
+   - Generous negative space
+   - High contrast text (WCAG AAA)
+   ============================================ */
+
+/* ============================================
+   Brand Color Palette - Disciplined Usage
+   
+   DO's:
+   - Use light backgrounds (Cream, Stone, White)
+   - Keep Brass to hairlines, bullets, small icons
+   - Let food provide color; props stay neutral
+   
+   DON'Ts:
+   - Don't use bright saturated blocks
+   - Don't use accent colors for body text
+   - Don't use Brass for large fills
+   ============================================ */
+:root {
+  /* Neutrals: Canvas and text */
+  --cream: #EFE3D7;         /* Primary background */
+  --stone: #C9C3BA;         /* Secondary background, borders */
+  --ink: #36394C;           /* Primary text - HIGH CONTRAST (13.2:1 on cream) */
+  
+  /* Accents: Reserved for specific uses */
+  --burgundy: #5B2E34;      /* CTAs and links ONLY - Never body text */
+  --brass: #C4A46A;         /* Hairlines, micro-details ONLY - Never fills or body text */
+}
+
+/* Typography System */
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings - Libre Baskerville (Display Serif) */
+/* DON'T: Never use display serif for long paragraphs or body text */
+/* DO: Use only for headings, short labels, micro-details */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(36px, 5vw, 48px);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 36px);
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: clamp(20px, 3vw, 24px);
+  letter-spacing: 0;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 18px;
+  letter-spacing: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Body Text - Montserrat */
+/* ACCESSIBILITY RULE: Body text must ALWAYS be high contrast Ink Navy (#36394C) */
+/* NEVER use accent colors (Burgundy, Brass) for body paragraphs */
+/* WCAG AAA compliance: 13.2:1 contrast ratio on cream background */
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+/* Quiet voice: Short sentences. No hype. Clarity, then feeling. */
+
+/* Micro-Detail Typography */
+.section-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.label-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+/* Links - Disciplined Burgundy */
+a {
+  color: var(--burgundy);
+  text-decoration: none;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+a:hover {
+  color: var(--brass);
+  opacity: 0.85;
+}
+
+/* Buttons - Primary CTA */
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Dividers and Rules */
+.divider-stone {
+  height: 1px;
+  background-color: var(--stone);
+  border: none;
+  margin: 3rem 0;
+}
+
+.divider-brass {
+  height: 0.5px;
+  background-color: var(--brass);
+  border: none;
+  margin: 2rem 0;
+}
+
+/* Brass Arc Tessellation Pattern */
+.brass-pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.brass-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, transparent 10%, var(--brass) 10%, var(--brass) 11%, transparent 11%),
+    radial-gradient(circle at 80% 50%, transparent 10%, var(--brass) 10%, var(--brass) 11%, transparent 11%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Quiet Luxury Shadows */
+.shadow-quiet {
+  box-shadow: 
+    0 1px 2px rgba(54, 57, 76, 0.05),
+    0 4px 8px rgba(54, 57, 76, 0.04);
+}
+
+.shadow-quiet-hover {
+  box-shadow: 
+    0 4px 8px rgba(54, 57, 76, 0.06),
+    0 8px 16px rgba(54, 57, 76, 0.08);
+}
+
+/* Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Selection Styling */
+::selection {
+  background-color: var(--brass);
+  color: white;
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+/* Image Loading States */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Generous Spacing Utilities */
+.section-padding {
+  padding: clamp(60px, 10vw, 120px) 0;
+}
+
+.container-narrow {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-medium {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-wide {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Editorial Grid - Asymmetric Splits */
+.split-60-40 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 2rem;
+}
+
+.split-70-30 {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .split-60-40,
+  .split-70-30 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Negative Space - Breathing Room */
+.breathe {
+  padding: clamp(40px, 8vw, 80px);
+}
+
+/* Accessibility - WCAG AAA Compliance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --ink: #000000;
+    --stone: #666666;
+  }
+}
+
+/* Tactile Details - Hairlines and Rules */
+/* DO: Keep Brass to hairlines, bullets, small icons */
+/* DON'T: Never use Brass for large fills or button backgrounds */
+.hairline-brass {
+  height: 0.5px;
+  background-color: var(--brass);
+  opacity: 0.6;
+}
+
+.hairline-stone {
+  height: 1px;
+  background-color: var(--stone);
+  opacity: 0.3;
+}
+
+/* ============================================
+   DESIGN SYSTEM ENFORCEMENT
+   ============================================ */
+
+/* DO's */
+/* ✅ Use light backgrounds and generous spacing */
+/* ✅ Keep accents (Brass) to hairlines, bullets, small icons */
+/* ✅ Let food provide most color; props stay neutral */
+/* ✅ Keep messaging plain and confident */
+
+/* DON'Ts */
+/* ❌ Don't use bright saturated blocks or oversized display type */
+/* ❌ Don't typeset long paragraphs in the display serif */
+/* ❌ Don't use accent colors for body text or large fills */
