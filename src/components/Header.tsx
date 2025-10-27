@@ -93,7 +93,7 @@ export function Header({ onNavigate, alwaysLight = false, currentPage = 'home', 
               aria-label="La Bella Mesa Home"
             >
               <img
-                src="/01_Logo/PNG/WIDE_ASPECTRATIO_BLACK.png"
+                src="01_Logo/PNG/WIDE_ASPECTRATIO_BLACK.png"
                 alt="La Bella Mesa"
                 className="transition-all duration-500 ease-in-out"
                 style={{
@@ -185,7 +185,7 @@ export function Header({ onNavigate, alwaysLight = false, currentPage = 'home', 
             aria-label="La Bella Mesa Home"
           >
             <img
-              src="/01_Logo/PNG/WIDE_ASPECTRATIO_BLACK.png"
+              src="01_Logo/PNG/WIDE_ASPECTRATIO_BLACK.png"
               alt="La Bella Mesa"
               className="transition-all duration-500 ease-in-out"
               style={{

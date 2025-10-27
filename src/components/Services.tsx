@@ -160,18 +160,19 @@ export function Services({ onNavigate }: ServicesProps = {}) {
 
         {/* CTA - Centered */}
         <div className="mt-24 text-center">
-          <a
-            href="#contact"
-            className="inline-block bg-[#5B2E34] text-[#EFE3D7] px-10 py-4 transition-all duration-300 hover:bg-[#4F272C] hover:shadow-quiet-hover"
+          <button
+            onClick={() => onNavigate?.('menu')}
+            className="relative bg-[#5B2E34] text-[#EFE3D7] px-10 py-4 transition-all duration-300 hover:bg-[#4F272C] hover:shadow-quiet-hover overflow-hidden group"
             style={{
-              fontFamily: 'Montserrat, sans-serif',
               fontSize: '15px',
               fontWeight: 500,
               letterSpacing: '0.02em',
+              fontFamily: 'Montserrat, sans-serif',
             }}
           >
-            VIEW MENU
-          </a>
+            <span className="relative z-10">VIEW MENU</span>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </button>
         </div>
       </div>
     </section>

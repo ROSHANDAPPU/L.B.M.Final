@@ -21,31 +21,17 @@ export function Hero({ onNavigate }: HeroProps) {
   }, []);
 
   return (
-    <section id="hero" className="relative h-screen overflow-hidden bg-[#36394C]">
-      {/* Full-bleed Aspirational Video */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay={!isMobile}
-          loop
-          muted
-          playsInline
-          poster="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwdGFibGUlMjBzZXR0aW5nJTIwYnJpZ2h0JTIwbGlnaHR8ZW58MXx8fHwxNzU5OTkwMDQ2fDA&ixlib=rb-4.1.0&q=80&w=1080"
-          className="w-full h-full object-cover transition-transform duration-[15000ms] ease-out"
-          style={{
-            transform: isVisible ? 'scale(1.05)' : 'scale(1)',
-          }}
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-          <source src="/hero-video.webm" type="video/webm" />
-          {/* Fallback image */}
+    <section id="hero" className="relative h-screen overflow-hidden bg-[#EFE3D7]">
+      {/* Centered Image with curved border */}
+      <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8 md:p-12 lg:p-16">
+        <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-lg">
           <img
             src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwdGFibGUlMjBzZXR0aW5nJTIwYnJpZ2h0JTIwbGlnaHR8ZW58MXx8fHwxNzU5OTkwMDQ2fDA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Bright, airy table setting with natural light and elegant simplicity"
             className="w-full h-full object-cover"
           />
-        </video>
-        {/* Light Cream overlay for Ink Navy text contrast */}
-        <div className="absolute inset-0 bg-[#EFE3D7]/10" />
+           <div className="absolute inset-0 bg-black/10" />
+        </div>
       </div>
 
       {/* Overlay Text - Centered with Generous Space */}

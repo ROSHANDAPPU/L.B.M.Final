@@ -36,7 +36,7 @@ export function Gallery() {
       <div className="container-wide mx-auto px-6 lg:px-8">
         {/* Section Number - Kalm Kitchen Style */}
         <div className="section-number mb-12">
-          <span className="inline-block px-3 py-1 border border-[#C9C3BA]" style={{ color: '#36394C' }}>04 · Gallery</span>
+          <span className="inline-block px-3 py-1 border border-[#C9C3BA]" style={{ color: '#36394C' }}>03 · Gallery</span>
         </div>
 
         {/* Intro */}

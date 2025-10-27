@@ -29,7 +29,7 @@ export function Testimonials() {
                 color: '#C9C3BA',
                 fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 400
-              }}>03 · </span>
+              }}>04 · </span>
               <span style={{
                 color: '#36394C',
                 fontFamily: 'Montserrat, sans-serif',
@@ -67,29 +67,23 @@ export function Testimonials() {
         </div>
       </div>
 
-      {/* Pattern Texture Layer with Stone Background */}
+      {/* Pattern Texture Layer */}
       <div
-        className="py-16 bg-[#C9C3BA] relative"
+        className="py-16 relative"
+        style={{
+          backgroundImage: `url("/pattern.png")`,
+          backgroundSize: '200px 200px',
+          backgroundRepeat: 'repeat',
+        }}
       >
-        {/* Pattern overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("/02_Templates/Pattern/LA BELLA MESA PATTERN.png")`,
-            backgroundSize: '200px 200px',
-            backgroundRepeat: 'repeat',
-            opacity: 0.07
-          }}
-        />
-
-        {/* Cards container with higher z-index */}
-        <div className="relative z-10">
+        {/* Cards container */}
+        <div className="relative">
           <div className="container-wide mx-auto px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-12 lg:gap-16">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="relative bg-[#EFE3D7] border border-[#C9C3BA] p-6 shadow-quiet"
+                  className="relative border border-[#C9C3BA] p-6 shadow-quiet"
                 >
                   {/* Brass accent */}
                   <div className="absolute top-0 left-0 w-full h-[1px] bg-[#C4A46A]" />

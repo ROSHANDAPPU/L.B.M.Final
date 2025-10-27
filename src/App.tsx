@@ -81,8 +81,8 @@ export default function App() {
       <Hero onNavigate={scrollToSection} />
       <About />
       <Services onNavigate={handleNavigation} />
-      <Testimonials />
       <Gallery />
+      <Testimonials />
       <Contact />
       <Footer />
     </div>

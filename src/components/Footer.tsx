@@ -14,7 +14,7 @@ export function Footer() {
           <div>
             <div className="mb-6">
               <img
-                src="/La_Bella_Mesa_Brand_Package/01_Logo/PNG/SQUARE_TRANSPARENT_INK_NAVY.png"
+                src="01_Logo/PNG/SQUARE_TRANSPARENT_INK_NAVY.png"
                 alt="La Bella Mesa"
                 style={{ height: '100px', width: 'auto' }}
               />
